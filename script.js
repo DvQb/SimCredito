@@ -1,8 +1,58 @@
 
- 
+
+//declarar una clase constructora para crear los objetos que serian los tipos de interes
+
+//  class tiposInteres{
+//     constructor( porcentaje){
+//         this.porcentaje = porcentaje;
+//     }
+//     obtenerInformacion(index){
+//         return{
+//             porcentaje: this.porcentaje[index],
+
+//         }
+//     }
+//  }
+
+ //Tipos de interes
+
+
+//  const tipoA =  new tiposInteres (
+//     [12.79 , 12.84 , 12.94 , 13.06 , 13.24 , 13.39 ]
+//  )
+
+//  const tipoB = new tiposInteres (
+//     [13.79, 13.84, 13.94, 14.09, 14.24, 14.39, 14.69]
+//  )
+
+//  const tipoC = new tiposInteres (
+//     [13.79, 13.84, 13.94, 14.09, 14.24, 14.39, 14.69, 15.29]
+//  )
+
+//  const tipoD = new tiposInteres (
+//     [13.79, 13.84, 13.94, 14.09, 14.24, 14.39, 14.69, 15.29, 15.39]
+//  )
+
+//  const tipoE = new tiposInteres (
+//     [13.79, 13.84, 13.94, 14.09, 14.24, 14.39, 14.69, 15.29, 15.39, 15.59, 15.89]
+//  )
+
+
+
+    const tipoA = [12.79, 12.84, 12.94, 13.06, 13.24, 13.39, 13.69, 14.29, 14.39, 14.59, 14.89]
+    const tipoB = [13.79, 13.84, 13.94, 14.09, 14.24, 14.39, 14.69, 15.29, 15.39, 15.59, 15.89]
+    const tipoC = [14.79, 14.84, 14.94, 15.09, 15.24, 15.39, 15.69, 16.29, 16.39, 16.59, 16.89]
+    const tipoD = [15.79, 15.84, 15.94, 16.09, 16.24, 16.39, 16.69, 17.29, 17.39, 17.59, 17.89]
+    const tipoE = [16.79, 16.84, 16.94, 17.09, 17.24, 17.39, 17.69, 18.29, 18.39, 18.59, 18.89]
+    
+
 
 function calcular(){
+
+
+
     let monto = parseInt(document.getElementById("monto").value) ;
+
     //tasaNominal TIPO A
     
    if ( monto <= 19999 ) {
@@ -12,37 +62,37 @@ function calcular(){
         switch (meses){
             
             case "12":
-            tasaNominal = 12.79
+            tasaNominal = tipoA[0]
             break;
             case "18":
-            tasaNominal = 12.84
+            tasaNominal = tipoA[1]
             break;
             case "24":
-            tasaNominal = 12.94
+            tasaNominal = tipoA[2]
             break;
             case "36":
-            tasaNominal = 13.09
+            tasaNominal = tipoA[3]
             break;
             case "48":
-            tasaNominal = 13.24
+            tasaNominal = tipoA[4]
             break;
             case "60":
-            tasaNominal = 13.39
+            tasaNominal = tipoA[5]
             break;
             case "72":
-            tasaNominal = 13.69
+            tasaNominal = tipoA[6]
             break;
             case "84":
-            tasaNominal = 14.29
+            tasaNominal = tipoA[7]
             break;
             case "96":
-            tasaNominal = 14.39
+            tasaNominal = tipoA[8]
             break;
             case "108":
-            tasaNominal = 14.59
+            tasaNominal = tipoA[9]
             break;
             case "120":
-            tasaNominal = 14.89
+            tasaNominal = tipoA[10]
             break;
             
             
@@ -54,37 +104,37 @@ function calcular(){
         switch (meses){
             
             case "12":
-            tasaNominal = 13.79
+            tasaNominal = tipoB[0]
             break;
             case "18":
-            tasaNominal = 13.84
+            tasaNominal = tipoB[1]
             break;
             case "24":
-            tasaNominal = 13.94
+            tasaNominal = tipoB[2]
             break;
             case "36":
-            tasaNominal = 14.09
+            tasaNominal = tipoB[3]
             break;
             case "48":
-            tasaNominal = 14.24
+            tasaNominal = tipoB[4]
             break;
             case "60":
-            tasaNominal = 14.39
+            tasaNominal = tipoB[5]
             break;
             case "72":
-            tasaNominal = 14.69
+            tasaNominal = tipoB[6]
             break;
             case "84":
-            tasaNominal = 15.29
+            tasaNominal = tipoB[7]
             break;
             case "96":
-            tasaNominal = 15.39
+            tasaNominal = tipoB[8]
             break;
             case "108":
-            tasaNominal = 15.59
+            tasaNominal = tipoB[9]
             break;
             case "120":
-            tasaNominal = 15.89
+            tasaNominal = tipoB[10]
             break;
         }
         //tasaNominal TIPO C
@@ -94,37 +144,37 @@ function calcular(){
         switch (meses){
             
             case "12":
-            tasaNominal = 14.79
+            tasaNominal = tipoC[0]
             break;
             case "18":
-            tasaNominal = 14.84
+            tasaNominal = tipoC[1]
             break;
             case "24":
-            tasaNominal = 14.94
+            tasaNominal = tipoC[2]
             break;
             case "36":
-            tasaNominal = 15.09
+            tasaNominal = tipoC[3]
             break;
             case "48":
-            tasaNominal = 15.24
+            tasaNominal = tipoC[4]
             break;
             case "60":
-            tasaNominal = 15.39
+            tasaNominal = tipoC[5]
             break;
             case "72":
-            tasaNominal = 15.69
+            tasaNominal = tipoC[6]
             break;
             case "84":
-            tasaNominal = 16.29
+            tasaNominal = tipoC[7]
             break;
             case "96":
-            tasaNominal = 16.39
+            tasaNominal = tipoC[8]
             break;
             case "108":
-            tasaNominal = 16.59
+            tasaNominal = tipoC[9]
             break;
             case "120":
-            tasaNominal = 16.89
+            tasaNominal = tipoC[10]
             break;
         }
         //tasaNominal TIPO D
@@ -134,37 +184,37 @@ function calcular(){
         switch (meses){
             
             case "12":
-            tasaNominal = 15.79
+            tasaNominal = tipoD[0]
             break;
             case "18":
-            tasaNominal = 15.84
+            tasaNominal = tipoD[1]
             break;
             case "24":
-            tasaNominal = 15.94
+            tasaNominal = tipoD[2]
             break;
             case "36":
-            tasaNominal = 16.09
+            tasaNominal = tipoD[3]
             break;
             case "48":
-            tasaNominal = 16.24
+            tasaNominal = tipoD[4]
             break;
             case "60":
-            tasaNominal = 16.39
+            tasaNominal = tipoD[5]
             break;
             case "72":
-            tasaNominal = 16.69
+            tasaNominal = tipoD[6]
             break;
             case "84":
-            tasaNominal = 17.29
+            tasaNominal = tipoD[7]
             break;
             case "96":
-            tasaNominal = 17.39
+            tasaNominal = tipoD[8]
             break;
             case "108":
-            tasaNominal = 17.59
+            tasaNominal = tipoD[9]
             break;
             case "120":
-            tasaNominal = 17.89
+            tasaNominal = tipoD[10]
             break;
         }
         //tasaNominal TIPO E
@@ -174,65 +224,99 @@ function calcular(){
         switch (meses){
             
             case "12":
-            tasaNominal = 18.79
+            tasaNominal = tipoE[0]
             break;
             case "18":
-            tasaNominal = 18.84
+            tasaNominal = tipoE[1]
             break;
             case "24":
-            tasaNominal = 18.94
+            tasaNominal = tipoE[2]
             break;
             case "36":
-            tasaNominal = 19.09
+            tasaNominal = tipoE[3]
             break;
             case "48":
-            tasaNominal = 19.24
+            tasaNominal = tipoE[4]
             break;
             case "60":
-            tasaNominal = 19.39
+            tasaNominal = tipoE[5]
             break;
             case "72":
-            tasaNominal = 19.69
+            tasaNominal = tipoE[6]
             break;
             case "84":
-            tasaNominal = 20.29
+            tasaNominal = tipoE[7]
             break;
             case "96":
-            tasaNominal = 20.39
+            tasaNominal = tipoE[8]
             break;
             case "108":
-            tasaNominal = 20.59
+            tasaNominal = tipoE[9]
             break;
             case "120":
-            tasaNominal = 21
+            tasaNominal = tipoE[10]
             break;
         }
 
         
     } 
 
+
+    
     
 
- let tasaReal = tasaNominal/100;
- let meses = parseFloat(document.getElementById("meses").value) ;
- let total = (monto + (monto*tasaReal));
- let pago = (monto + (monto*tasaReal))/meses
-
- console.log(pago.toFixed(2));
-  
- function procesarValor(a){
-     return a - pago;
-    }
- let valorInicial = total + pago ;
- for( i = 1; i <= meses; i++){
-
-     valorInicial = procesarValor(valorInicial);
-     console.log(`Saldo pendiente ${i} : ${valorInicial.toFixed(2)}`);
-
-  }
  
-  console.log(`Saldo pendiente ${meses += 1} : Credito pagado`)
+
+ let meses = parseFloat(document.getElementById("meses").value) ;
+
+
+    const calcularPago = (monto ,tasaNominal, meses) => {
+        const tasaMensual = tasaNominal/12/100;
+        const cuotaMensual = (monto * tasaMensual) / (1 - Math.pow(1 + tasaMensual, -meses));
+        return cuotaMensual;
+    };
+
+    const pagoMensual = calcularPago(monto, tasaNominal, meses);
+
+    console.log(pagoMensual);
+
+    const calcularCredito = (monto ,tasaNominal, meses) => {
+        const tasaMensual = tasaNominal/12/100;
+        const cuotaMensual = (monto * tasaMensual) / (1 - Math.pow(1 + tasaMensual, -meses));
+        const montoTotal = cuotaMensual * meses;
+        return montoTotal;
+    };
+
+    const totalPagar = calcularCredito(monto, tasaNominal, meses);
+
+    console.log(totalPagar.toFixed(2))
+
+    let total = totalPagar;
+
+    let pago = pagoMensual
+
+    console.log(pago.toFixed(2));
+    
+    function procesarValor(a){
+        return a - pago;
+        }
+    let valorInicial = total + pago ;
+    for( i = 1; i <= meses; i++){
+
+        valorInicial = procesarValor(valorInicial);
+        console.log(`Saldo pendiente ${i} : ${valorInicial.toFixed(2)}`);
+
+    }
+    
+    console.log(`Saldo pendiente ${meses += 1} : Credito pagado`)
+
+
+
+
+
 }
+
+
 
 
 
