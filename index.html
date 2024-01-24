@@ -9,7 +9,9 @@
     <h1>Calcula tu credito facilmente</h1>
     
 
-    <button onclick="calcular()">Calcular</button>
+    <button id="botonCalcular" >Calcular</button>
+    <button id="eliminar">Eliminar</button>
+
     
     <label for="monto">Monto</label>
     <input type="number" id="monto" name="monto">
@@ -28,8 +30,29 @@
         <option value="96">96</option>
         <option value="108">108</option>
         <option value="120">120</option>
+     </select>
+
+
     
-    <p id="tasa"></p>
+    
+    <div id="content">
+        <h2 id="showTotal">Este es el total<h2>
+        <h2 id="showPago">Este es el pago</h2>
+        <h2 id="showInteres">Este es el interes</h2>
+        <h2>Tabla de Saldos</h2>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Numero de pago</th>
+            <th>Saldo</th>
+        </tr>
+    </thead>
+    <tbody id="tablaBody">
+
+    </tbody>
+</table>
+
+    </div>
 
 
 

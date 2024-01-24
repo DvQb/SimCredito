@@ -44,8 +44,21 @@
     const tipoC = [14.79, 14.84, 14.94, 15.09, 15.24, 15.39, 15.69, 16.29, 16.39, 16.59, 16.89]
     const tipoD = [15.79, 15.84, 15.94, 16.09, 16.24, 16.39, 16.69, 17.29, 17.39, 17.59, 17.89]
     const tipoE = [16.79, 16.84, 16.94, 17.09, 17.24, 17.39, 17.69, 18.29, 18.39, 18.59, 18.89]
+
+
+    var recarga = document.getElementById("eliminar");
+    recarga.addEventListener("click", function(){
+        location.reload();
+    })
     
 
+    var botonCalcular = document.getElementById("botonCalcular");
+    botonCalcular.addEventListener("click", function(){
+        // location.reload();
+
+        calcular();
+
+    })
 
 function calcular(){
 
@@ -278,7 +291,6 @@ function calcular(){
 
     const pagoMensual = calcularPago(monto, tasaNominal, meses);
 
-    console.log(pagoMensual);
 
     const calcularCredito = (monto ,tasaNominal, meses) => {
         const tasaMensual = tasaNominal/12/100;
@@ -289,30 +301,83 @@ function calcular(){
 
     const totalPagar = calcularCredito(monto, tasaNominal, meses);
 
-    console.log(totalPagar.toFixed(2))
+    // console.log(totalPagar.toFixed(2))
 
     let total = totalPagar;
 
     let pago = pagoMensual
 
-    console.log(pago.toFixed(2));
+    // console.log(pago.toFixed(2));
     
     function procesarValor(a){
         return a - pago;
         }
     let valorInicial = total + pago ;
+
+        var resultados = [];
+
     for( i = 1; i <= meses; i++){
 
         valorInicial = procesarValor(valorInicial);
-        console.log(`Saldo pendiente ${i} : ${valorInicial.toFixed(2)}`);
+        // console.log(`Saldo pendiente ${i} : ${valorInicial.toFixed(2)}`);
+        resultados.push( valorInicial.toFixed(2));
 
     }
+
     
-    console.log(`Saldo pendiente ${meses += 1} : Credito pagado`)
+
+    // console.log(`Saldo pendiente ${meses += 1} : Credito pagado`)
+
+    console.log(resultados)
+
+    
+
+    // Esta seccion muestra los resultados del prestamo en HTML
+
+    let mostrarTotal = document.getElementById("showTotal");
+    mostrarTotal.innerHTML = `Su total a pagar sera: ${totalPagar.toFixed(2)}`
+
+    let mostrarPago = document.getElementById("showPago");
+    mostrarPago.innerHTML = `Su pago sera: ${pago.toFixed(2)}`
+
+    let mostrarInteres = document.getElementById("showInteres");
+    mostrarInteres.innerHTML = `Su interes sera de: ${tasaNominal}%`
+
+    // let mostrarSaldos = document.getElementById("showSaldo");
+    // mostrarSaldos.innerHTML = saldos
+    
+
+    //Esta seccion genera la tabla de saldos
+
+    let saldos = resultados
+
+    var tablaBody = document.getElementById("tablaBody");
+
+    // recorre el array y construye las filas de la tabla
+    for(var i = 0; i < saldos.length; i++){
+
+        var fila = document.createElement("tr");
+
+        //crea celdas para el indice y el valor
+
+        var celdaIndice  = document.createElement("td");
+        var celdaValor = document.createElement("td");
+
+        // Establece el contenido de las celdas
+
+        celdaIndice.textContent = `Saldo pendiente : ${i+1} `;
+        celdaValor.textContent = saldos[i];
+
+        // agrega las celdas a la fila 
+        fila.appendChild(celdaIndice);
+        fila.appendChild(celdaValor);
+
+        // agrega la fila al cuerpo de la tabla
+
+        tablaBody.appendChild(fila);
 
 
-
-
+    }
 
 }
 
