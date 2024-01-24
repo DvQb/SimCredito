@@ -62,6 +62,15 @@
 
 function calcular(){
 
+    
+    //esta seccion crea un nuevo link para enviar a la pagina de solicitar
+
+    var solicitar = document.createElement("link");
+    solicitar.textContent = "Solicitar";
+    solicitar.href = "solicitar.html"
+    var contenedorBotones = document.getElementById("contenedorBotones");
+    contenedorBotones.appendChild(solicitar);
+
 
 
     let monto = parseInt(document.getElementById("monto").value) ;
