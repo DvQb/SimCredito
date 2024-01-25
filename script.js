@@ -46,30 +46,50 @@
     const tipoE = [16.79, 16.84, 16.94, 17.09, 17.24, 17.39, 17.69, 18.29, 18.39, 18.59, 18.89]
 
 
-    var recarga = document.getElementById("eliminar");
-    recarga.addEventListener("click", function(){
-        location.reload();
-    })
+    
+  
     
 
     var botonCalcular = document.getElementById("botonCalcular");
     botonCalcular.addEventListener("click", function(){
-        // location.reload();
+        
 
         calcular();
 
+        agregarBoton();
+
     })
+
+    function refresh(){
+        location.reload();
+    }
+
+ function agregarBoton() {
+
+    var solicitar = document.createElement("a");
+    solicitar.textContent = "Solicitar";
+    solicitar.href = "solicitar.html";
+    var contenedorBotones = document.getElementById("contenedorBotones");
+    contenedorBotones.appendChild(solicitar);
+
+    var eliminar = document.createElement("button");
+    eliminar.textContent = "Eliminar";
+    eliminar.onclick = refresh;
+    // recarga.addEventListener("click", function(){
+    //     location.reload();
+    // })
+    var contenedorBotones = document.getElementById("contenedorBotones");
+    contenedorBotones.appendChild(eliminar);
+
+
+ }
 
 function calcular(){
 
-    
+
     //esta seccion crea un nuevo link para enviar a la pagina de solicitar
 
-    var solicitar = document.createElement("link");
-    solicitar.textContent = "Solicitar";
-    solicitar.href = "solicitar.html"
-    var contenedorBotones = document.getElementById("contenedorBotones");
-    contenedorBotones.appendChild(solicitar);
+    
 
 
 
@@ -389,6 +409,24 @@ function calcular(){
     }
 
 }
+
+function capturar() {
+
+    var nombre = document.getElementById("nombre").value;
+    var telefono = document.getElementById("telefono").value;
+    var correo = document.getElementById("correo").value;
+    var cliente = document.getElementById("cliente").value;
+
+    var solicitante = {
+        "nombre" : nombre,
+        "telefono" : telefono,
+        "correo" : correo,
+        "cliente": cliente,
+    };
+
+    console.log  (solicitante)
+}
+
 
 
 

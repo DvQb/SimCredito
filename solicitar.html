@@ -8,17 +8,23 @@
 <body>
 
     <label for="nombre">Nombre</label>
-    <input type="text" id="nombre" name="nombre">
-    <label for="telefono">Monto</label>
-    <input type="text" id="telefono" name="telefono">
-    <label for="correo">Monto</label>
-    <input type="email" id="correo" name="correo">
+    <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+
+    <label for="telefono">Telefono</label>
+    <input type="number" id="telefono" name="telefono" placeholder="Telefono">
+
+    <label for="correo">Correo</label>
+    <input type="email" id="correo" name="correo" placeholder="Correo">
 
     <select id="usario" name="usuario" >
-        <option value="true">Si</option>
-        <option value="false">No</option>
+        <option >Si</option>
+        <option >No</option>
        
      </select>
-    
+
+     <button onclick="capturar()">Solicitar mi prestamo</button>
+
+     <script src="script.js"> </script>
+
 </body>
 </html>
