@@ -61,7 +61,13 @@
     })
 
     function refresh(){
+
+
         location.reload();
+
+
+
+
     }
 
  function agregarBoton() {
@@ -75,9 +81,7 @@
     var eliminar = document.createElement("button");
     eliminar.textContent = "Eliminar";
     eliminar.onclick = refresh;
-    // recarga.addEventListener("click", function(){
-    //     location.reload();
-    // })
+    
     var contenedorBotones = document.getElementById("contenedorBotones");
     contenedorBotones.appendChild(eliminar);
 
@@ -92,7 +96,7 @@ function calcular(){
     
 
 
-
+    let tasaNominal ;
     let monto = parseInt(document.getElementById("monto").value) ;
 
     //tasaNominal TIPO A
@@ -410,22 +414,6 @@ function calcular(){
 
 }
 
-function capturar() {
-
-    var nombre = document.getElementById("nombre").value;
-    var telefono = document.getElementById("telefono").value;
-    var correo = document.getElementById("correo").value;
-    var cliente = document.getElementById("cliente").value;
-
-    var solicitante = {
-        "nombre" : nombre,
-        "telefono" : telefono,
-        "correo" : correo,
-        "cliente": cliente,
-    };
-
-    console.log  (solicitante)
-}
 
 
 

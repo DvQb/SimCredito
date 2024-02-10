@@ -6,25 +6,32 @@
     <title>Document</title>
 </head>
 <body>
+    <form id="formulario">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre">
 
-    <label for="nombre">Nombre</label>
-    <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+        <label for="telefono">Telefono</label>
+        <input type="number" id="telefono" name="telefono" placeholder="Telefono">
 
-    <label for="telefono">Telefono</label>
-    <input type="number" id="telefono" name="telefono" placeholder="Telefono">
+        <label for="correo">Correo</label>
+        <input type="email" id="correo" name="correo" placeholder="Correo">
 
-    <label for="correo">Correo</label>
-    <input type="email" id="correo" name="correo" placeholder="Correo">
+        <label for="cliente">Ya es cliente?</label>
+        <select id="cliente" name="usuario" >
+            <option >Si</option>
+            <option >No</option>
+        
+        </select>
 
-    <select id="usario" name="usuario" >
-        <option >Si</option>
-        <option >No</option>
-       
-     </select>
+        <button type="button" id="capturar">Solicitar mi prestamo</button>
+    </form>
 
-     <button onclick="capturar()">Solicitar mi prestamo</button>
+    <div>
+        <h2 id="solicitante"></h2>
+    </div>
 
-     <script src="script.js"> </script>
+    <script src="script2.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 </html>

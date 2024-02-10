@@ -1,7 +1,0 @@
-{
-    "nombre": "nombre",
-    "telefono": "telefono",
-    "correo": "correo",
-    "cliente":"cliente",
-    "prestamo": ["monto","pago","interes","plazo"]
-}

@@ -1,0 +1,16 @@
+[
+    {
+    "nombre": "Jesus",
+    "telefono": "4434741464",
+    "correo": "jesus@gmail.com",
+    "cliente":"true",
+    "prestamo": ["monto","pago","interes","plazo"]
+},
+{
+    "nombre": "Juan",
+    "telefono": "4434878464",
+    "correo": "juan@gmail.com",
+    "cliente":"false",
+    "prestamo": ["monto","pago","interes","plazo"]
+}
+]
